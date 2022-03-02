@@ -1,0 +1,61 @@
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+  "username": "chuc",
+  "password": "chuc"
+}
+
+###
+
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "username": "chuc",
+  "password": "chuc"
+}
+
+###
+
+GET http://localhost:3000/posts
+
+###
+
+POST http://localhost:3000/create/post
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNodWMiLCJpZCI6MSwiaWF0IjoxNjQ2MjIwODgzfQ.tjkp8F-5XauJhbYGnGWbujX_xlHqK7hBiiHyTqq6wuY
+
+{
+  "title": "React",
+  "postText": "React",
+  "username": "React",
+}
+
+###
+
+POST http://localhost:3000/create/comment
+Content-Type: application/json
+Authorization: accessToken eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNodWMiLCJpZCI6MSwiaWF0IjoxNjQ2MjIwOTE4fQ.3u8olvergmjBpXb8ygA3jwtsi9mVF1MH9JFJD51Fk5k
+
+{
+  "commentBody": "comment cua chuc"
+}
+
+###
+
+PUT http://localhost:3000/api/posts/6061c25ac2533d41dcae2b19
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTcwMTk3ODF9.ri-nHdgZc1VQTocFLfMgF4_PhFf2TeUVqXLd8tpOkeA
+
+{
+  "title": "Vue",
+  "description": "VUEEEEE",
+  "url": "https://vuejs.org",
+  "status": "LEARNING"
+}
+
+###
+
+DELETE http://localhost:3000/api/posts/6061c25ac2533d41dcae2b19
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MDYxYjk1YjdkMjljZTFiMTA5YmQxZTAiLCJpYXQiOjE2MTcwMTk3ODF9.ri-nHdgZc1VQTocFLfMgF4_PhFf2TeUVqXLd8tpOkeA
